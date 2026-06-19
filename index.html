@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shivaji & Sanjana Wedding | Ale Family's Wedding Invitation</title>
+    <meta name="description" content="You are cordially invited to the wedding celebration of Shivaji & Sanjana on 24th June 2026. Join us for this beautiful occasion at SV Function Hall, Gattuppal.">
+    <meta property="og:title" content="Shivaji ❤️ Sanjana - Wedding Invitation">
+    <meta property="og:description" content="Ale Family cordially invites you to celebrate the wedding of Shivaji & Sanjana on 24 June 2026.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#c8a45c">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============ FLOATING PETALS CANVAS ============ -->
+    <canvas id="petalsCanvas"></canvas>
+
+    <!-- ============ ENVELOPE LANDING ============ -->
+    <div id="envelopeLanding" class="envelope-landing">
+        <div class="envelope-particles" id="envelopeParticles"></div>
+        <div class="envelope-container" id="envelopeContainer">
+            <!-- Back flap -->
+            <div class="envelope-back"></div>
+            <!-- Envelope body -->
+            <div class="envelope-body">
+                <div class="envelope-pattern"></div>
+            </div>
+            <!-- Card inside envelope -->
+            <div class="envelope-card" id="envelopeCard">
+                <div class="card-inner">
+                    <div class="card-ornament top-ornament">❧</div>
+                    <p class="card-subtitle">You are invited to</p>
+                    <h2 class="card-title">Ale Family's</h2>
+                    <h3 class="card-title-sub">Wedding Invitation</h3>
+                    <div class="card-divider">
+                        <span class="divider-flower">✿</span>
+                    </div>
+                    <p class="card-names">Shivaji & Sanjana</p>
+                    <p class="card-date">24 June 2026</p>
+                    <div class="card-ornament bottom-ornament">❧</div>
+                </div>
+            </div>
+            <!-- Front flap (opens) -->
+            <div class="envelope-flap" id="envelopeFlap">
+                <div class="flap-inner"></div>
+            </div>
+            <!-- Wax Seal -->
+            <div class="wax-seal" id="waxSeal">
+                <div class="seal-shine"></div>
+                <span class="seal-letter">A</span>
+            </div>
+        </div>
+        <p class="envelope-family-text" id="envelopeFamilyText">Ale Family's Wedding Invitation</p>
+        <button class="open-btn" id="openBtn">
+            <span class="btn-icon">💌</span>
+            <span class="btn-text">Open Invitation</span>
+            <span class="btn-shimmer"></span>
+        </button>
+    </div>
+
+    <!-- ============ MAIN WEDDING SITE ============ -->
+    <div id="mainSite" class="main-site hidden">
+        <!-- Decorative top border -->
+        <div class="page-border-top">
+            <div class="corner-floral top-left"></div>
+            <div class="corner-floral top-right"></div>
+        </div>
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-ornament">
+                    <svg viewBox="0 0 200 30" class="ornament-svg">
+                        <path d="M0,15 Q50,0 100,15 Q150,30 200,15" fill="none" stroke="#c8a45c" stroke-width="1.5"/>
+                        <circle cx="100" cy="15" r="4" fill="#c8a45c"/>
+                        <circle cx="60" cy="8" r="2" fill="#c8a45c" opacity="0.6"/>
+                        <circle cx="140" cy="22" r="2" fill="#c8a45c" opacity="0.6"/>
+                    </svg>
+                </div>
+                <p class="hero-subtitle fade-in-up">Together with their families</p>
+                <div class="hero-photos">
+                    <div class="photo-frame groom-frame fade-in-left">
+                        <div class="frame-border">
+                            <div class="frame-corner fc-tl"></div>
+                            <div class="frame-corner fc-tr"></div>
+                            <div class="frame-corner fc-bl"></div>
+                            <div class="frame-corner fc-br"></div>
+                            <img src="images/groom.jpg" alt="Shivaji - Groom" class="photo-img">
+                        </div>
+                        <p class="photo-name">Shivaji</p>
+                    </div>
+                    <div class="heart-connector fade-in-up">
+                        <div class="heart-pulse">❤️</div>
+                    </div>
+                    <div class="photo-frame bride-frame fade-in-right">
+                        <div class="frame-border">
+                            <div class="frame-corner fc-tl"></div>
+                            <div class="frame-corner fc-tr"></div>
+                            <div class="frame-corner fc-bl"></div>
+                            <div class="frame-corner fc-br"></div>
+                            <img src="images/bride.jpg" alt="Sanjana - Bride" class="photo-img">
+                        </div>
+                        <p class="photo-name">Sanjana</p>
+                    </div>
+                </div>
+                <h1 class="hero-names fade-in-up">
+                    <span class="name-groom">Shivaji</span>
+                    <span class="name-amp">❤️</span>
+                    <span class="name-bride">Sanjana</span>
+                </h1>
+                <p class="hero-tagline fade-in-up">are getting married</p>
+                <div class="hero-ornament bottom">
+                    <svg viewBox="0 0 200 30" class="ornament-svg">
+                        <path d="M0,15 Q50,30 100,15 Q150,0 200,15" fill="none" stroke="#c8a45c" stroke-width="1.5"/>
+                        <circle cx="100" cy="15" r="4" fill="#c8a45c"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAMILY INVITATION SECTION ===== -->
+        <section class="family-section" id="family">
+            <div class="section-wrapper">
+                <div class="section-ornament">✿</div>
+                <h2 class="section-title fade-in-up">Ale Family's Wedding Invitation</h2>
+                <div class="gold-line fade-in-up"></div>
+                <div class="family-card fade-in-up">
+                    <div class="family-card-border">
+                        <p class="family-parents-label">With Best Compliments From</p>
+                        <p class="family-parents-names">Maraiah & Madhavi</p>
+                        <div class="family-divider">
+                            <span>❦</span>
+                        </div>
+                        <p class="family-message">
+                            Together with our families, we warmly invite you to celebrate the wedding of
+                            <strong>Shivaji</strong> and <strong>Sanjana</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WEDDING DETAILS SECTION ===== -->
+        <section class="details-section" id="details">
+            <div class="section-wrapper">
+                <div class="section-ornament">✿</div>
+                <h2 class="section-title fade-in-up">Wedding Details</h2>
+                <div class="gold-line fade-in-up"></div>
+                <div class="details-grid">
+                    <div class="detail-card fade-in-up" style="--delay: 0.1s">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                                <text x="12" y="18" text-anchor="middle" fill="#c8a45c" font-size="6" font-family="serif">24</text>
+                            </svg>
+                        </div>
+                        <h3 class="detail-label">Wedding Date</h3>
+                        <p class="detail-value">Wednesday</p>
+                        <p class="detail-value-large">24 June 2026</p>
+                    </div>
+                    <div class="detail-card fade-in-up" style="--delay: 0.2s">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3 class="detail-label">Muhurtham</h3>
+                        <p class="detail-value">Auspicious Time</p>
+                        <p class="detail-value-large">7:51 AM</p>
+                    </div>
+                    <div class="detail-card fade-in-up" style="--delay: 0.3s">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="detail-label">Venue</h3>
+                        <p class="detail-value">SV Function Hall</p>
+                        <p class="detail-value-small">Gattuppal–Chandur Road</p>
+                        <p class="detail-value-small">Behind Bharat Petroleum</p>
+                        <p class="detail-value-small">Gattuppal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== INVITATION CARD IMAGE ===== -->
+        <section class="invitation-section" id="invitationCard">
+            <div class="section-wrapper">
+                <div class="section-ornament">✿</div>
+                <h2 class="section-title fade-in-up">Our Invitation</h2>
+                <div class="gold-line fade-in-up"></div>
+                <div class="invitation-card-wrapper fade-in-up">
+                    <div class="invitation-card-frame">
+                        <img src="images/invitation.jpg" alt="Wedding Invitation Card" class="invitation-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== COUNTDOWN SECTION ===== -->
+        <section class="countdown-section" id="countdown">
+            <div class="section-wrapper">
+                <div class="section-ornament">✿</div>
+                <h2 class="section-title fade-in-up">Counting Down To Our Big Day</h2>
+                <div class="gold-line fade-in-up"></div>
+                <div class="countdown-grid fade-in-up" id="countdownGrid">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cdDays">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cdHours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cdMinutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cdSeconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALLERY SECTION ===== -->
+        <section class="gallery-section" id="gallery">
+            <div class="section-wrapper">
+                <div class="section-ornament">✿</div>
+                <h2 class="section-title fade-in-up">Our Gallery</h2>
+                <div class="gold-line fade-in-up"></div>
+                <div class="gallery-grid fade-in-up">
+                    <div class="gallery-item" onclick="openLightbox(0)">
+                        <img src="images/groom.jpg" alt="Shivaji" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Shivaji</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(1)">
+                        <img src="images/bride.jpg" alt="Sanjana" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Sanjana</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item gallery-item-wide" onclick="openLightbox(2)">
+                        <img src="images/invitation.jpg" alt="Wedding Invitation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Our Invitation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-prev" onclick="event.stopPropagation(); navigateLightbox(-1)">❮</button>
+            <button class="lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">❯</button>
+            <div class="lightbox-content" onclick="event.stopPropagation()">
+                <img id="lightboxImg" src="" alt="Gallery Image">
+            </div>
+        </div>
+
+        <!-- ===== VENUE / MAP SECTION ===== -->
+        <section class="venue-section" id="venue">
+            <div class="section-wrapper">
+                <div class="section-ornament">✿</div>
+                <h2 class="section-title fade-in-up">Wedding Venue</h2>
+                <div class="gold-line fade-in-up"></div>
+                <div class="venue-card fade-in-up">
+                    <div class="venue-info">
+                        <h3 class="venue-name">SV Function Hall</h3>
+                        <p class="venue-address">Gattuppal–Chandur Road</p>
+                        <p class="venue-address">Behind Bharat Petroleum</p>
+                        <p class="venue-address">Gattuppal</p>
+                    </div>
+                    <div class="venue-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800!2d78.9!3d17.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSV+Function+Hall+Gattuppal!5e0!3m2!1sen!2sin!4v1"
+                            width="100%"
+                            height="300"
+                            style="border:0; border-radius: 12px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/EJimaqDk9h7yfR6r6" target="_blank" rel="noopener" class="navigate-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Navigate to Venue
+                    </a>
+                </div>
+
+                <!-- QR Code -->
+                <div class="qr-section fade-in-up">
+                    <h3 class="qr-title">Scan to Get Directions</h3>
+                    <div class="qr-frame">
+                        <img src="images/qrcode.png" alt="QR Code for Venue Location" class="qr-img">
+                    </div>
+                    <p class="qr-subtitle">Scan with your phone camera</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer-section" id="footer">
+            <div class="footer-florals">
+                <div class="footer-floral left">✿</div>
+                <div class="footer-floral right">✿</div>
+            </div>
+            <div class="footer-content fade-in-up">
+                <div class="footer-ornament">
+                    <svg viewBox="0 0 200 30" class="ornament-svg">
+                        <path d="M0,15 Q50,0 100,15 Q150,30 200,15" fill="none" stroke="#c8a45c" stroke-width="1.5"/>
+                        <circle cx="100" cy="15" r="4" fill="#c8a45c"/>
+                    </svg>
+                </div>
+                <h2 class="footer-title">Thank You</h2>
+                <p class="footer-message">We look forward to celebrating with you.</p>
+                <div class="footer-names">Shivaji & Sanjana</div>
+                <p class="footer-date">24 · 06 · 2026</p>
+                <div class="footer-hearts">
+                    <span>❤</span><span>❤</span><span>❤</span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Decorative bottom border -->
+        <div class="page-border-bottom">
+            <div class="corner-floral bottom-left"></div>
+            <div class="corner-floral bottom-right"></div>
+        </div>
+    </div>
+
+    <!-- Audio (optional - plays soft music) -->
+    <button class="music-toggle" id="musicToggle" title="Toggle Music">
+        🎵
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
